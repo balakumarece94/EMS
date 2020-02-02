@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row border text-center"
+		style="background-color: lightgrey;">
+		<div class="col-lg-12">
+			<h3 class="text-primary">Add Employee</h3>
+		</div>
+		<div class="col-lg-12">
+			<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+				<div class="form-group">
+					<label for="uname">User Name :</label> <input type="text"
+						class="form-control-sm" name="uname" [(ngModel)]="employee.uname">
+				</div>
+				<div class="form-group">
+					<label for="psd">Password Name :</label> <input type="password"
+						class="form-control-sm" name="psd" [(ngModel)]="employee.psd">
+				</div>
+				<button type="submit" class="btn btn-success">SignUp</button>
+				<button class="btn btn-primary" type="button" (click)="onBack()">Back</button>
+				<button class="btn btn-danger" type="button" (click)="onHome()">Home</button>
+			</form>
+			<h4 *ngIf="isAdded">Employee added successfully.</h4>
+		</div>
+	</div>

@@ -1,0 +1,18 @@
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>S.No</th>
+				<th>Employee Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let employee of employees;">
+				<td>{{employee.id}}</td>
+				<td>{{employee.uname }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<button class="btn btn-primary" type="button" (click)="onBack()">Back</button>
+	<button class="btn btn-danger" type="button" (click)="onHome()">Home</button>
+</div>
